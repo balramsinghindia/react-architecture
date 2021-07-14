@@ -3,4 +3,11 @@ let technologies = {
     backend: ['java', 'php']
 }
 
+let receipe = {
+    ...technologies,
+    leather: 1,
+    refined: 'hello'
+}
+
 console.log(technologies);
+console.log(receipe);
