@@ -58,3 +58,10 @@ Setup Babel
     }
 ```
 
+Source maps
+/*
+- helps in debugging in non-prod environmment
+- by navigating to source file in browser console
+*/
+- webpack.config.js
+    - devtool: 'source-map'

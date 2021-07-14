@@ -12,6 +12,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: "./dist",
-    }
+        contentBase: './dist',
+    },
+    devtool: 'source-map'
 }
