@@ -6,7 +6,8 @@ let technologies = {
 let receipe = {
     ...technologies,
     leather: 1,
-    refined: 'hello'
+    refined: 'hello',
+    welcome: true
 }
 
 console.log(technologies);
