@@ -1,3 +1,5 @@
+import './styles/index.css';
+
 let technologies = {
     frontend: ['js', 'css', 'html', 'typescript'],
     backend: ['java', 'php']

@@ -65,3 +65,27 @@ Source maps
 */
 - webpack.config.js
     - devtool: 'source-map'
+
+
+CSS 
+/*
+    How to import CSS files in JavaScript files 
+*/
+- dev dependencies
+    - css-loader
+    - mini-css-extract-plugin
+- webpack.config.js
+```
+    const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+    {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+    }
+    
+    plugins: [new MiniCssExtractPlugin()],
+```
+- styles/index.css
+- included index.css in index.js
+- included generated main.css in index.html inside dist folder
+
