@@ -1,4 +1,4 @@
-import './styles/index.css';
+import './scss/index.scss';
 
 let technologies = {
     frontend: ['js', 'css', 'html', 'typescript'],

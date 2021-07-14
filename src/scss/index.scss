@@ -1,0 +1,15 @@
+@import 'variables';
+@import '_color';
+@import '_global';
+
+
+body {
+    background-color: $body-bg;
+    font-size: 16px;
+}
+
+h1 {
+    color: $heading-color;
+    font-size: 40px;
+    line-height: 60px;
+}

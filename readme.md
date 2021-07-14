@@ -89,3 +89,24 @@ CSS
 - included index.css in index.js
 - included generated main.css in index.html inside dist folder
 
+
+SCSS
+/*
+How to convert SCSS to CSS 
+How can we include SCSS files into JS files directly
+*/
+- dev dependencies
+    - sass
+    - sass-loader
+
+- webpack.config.js
+```
+ {
+    test: /\.s?css$/i,
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+}
+```
+- index.js 
+updated path of style from css to scss
+- created sample SCSS files
+
