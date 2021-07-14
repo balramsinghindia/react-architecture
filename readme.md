@@ -23,3 +23,38 @@ Setup Webpack Dev Server and run website from destination folder
 1. webpack.config.js
 - mode: "development"
 - devServer: { contentBase: "./dist", }
+
+Setup Babel
+/*
+ - converts jsx to js
+ - converts ES6 syntax to default JS (ES 5)
+ - allows us to support latest features in all browsers
+*/
+- dev dependencies
+    - babel-loader
+    - babel/core
+    - babel/preset-env
+
+- webpack config
+    ``` 
+        module: {
+            rules: [
+                {
+                    test: /\.js$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: 'babel-loader'
+                    }
+                }
+            ]
+        },
+    ```
+
+- babel.config.js
+
+```
+    module.exports = {
+        presets:["@babel/preset-env"]
+    }
+```
+
