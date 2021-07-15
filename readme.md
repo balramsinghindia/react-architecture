@@ -112,4 +112,18 @@ updated path of style from css to scss
 
 
 PostCSS
-
+/*
+PostCSS Preset Env allows modern CSS to be converted into format that old browsers can also understand
+*/
+- dev dependencies
+    - postcss
+    - postcss-preset-env
+    - postcss-loader
+- postcss.config.js
+```
+    module.exports = {
+        plugins: ["postcss-preset-env"]
+    }
+```
+- Updated webpack.config.js
+    - added postcss-loader 
