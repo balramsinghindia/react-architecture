@@ -1,4 +1,7 @@
+import { render } from 'react-dom';
 import './scss/index.scss';
+
+render(<h1>Welcome in React world</h1>, document.getElementById("root"));
 
 let technologies = {
     frontend: ['js', 'css', 'html', 'typescript'],

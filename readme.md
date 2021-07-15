@@ -139,3 +139,34 @@ Provide list of browsers that application has to support
     > 0.5%
     IE 10
 ```
+
+React with JSX
+/*
+What is JSX?
+*/
+- dependencies
+    - react
+    - react-dom
+- dev dependency
+    - @babel-preset-react
+
+- babel.config.js
+    Added 2nd parameter for JSX to JS conversion
+    Allowed to not to import React as per React version after 17+, in most of the cases
+
+    ```
+        ["@babel/preset-react", {
+            runtime: "automatic"
+        }]
+    ```
+- index.js
+    ```
+    import { render } from 'react-dom';
+    render(<h1>Welcome in React world</h1>, document.getElementById("root"));
+
+    ```
+- index.html
+    ```
+        <div id="root"></div>
+    ```
+    
