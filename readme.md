@@ -127,3 +127,15 @@ PostCSS Preset Env allows modern CSS to be converted into format that old browse
 ```
 - Updated webpack.config.js
     - added postcss-loader 
+
+
+Browsers List
+/*
+Provide list of browsers that application has to support
+*/
+- .browserslistrc
+```
+    last 2 versions
+    > 0.5%
+    IE 10
+```
