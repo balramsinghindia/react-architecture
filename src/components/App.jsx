@@ -1,4 +1,5 @@
 import Recipe from './Recipe';
+import { Footer } from './Footer';
 import './../scss/index.scss';
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
                     <Recipe />
                 </section>
             </main>
+            <Footer/>
         </>
     )
 }
