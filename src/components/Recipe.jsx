@@ -1,8 +1,13 @@
-const Recipe = () => {
+import { useState } from 'react';
+const Recipe = ({increaseCount,decreaseCount }) => {
     return (
-        <div>
-            Hello, i am Recipe React component
-        </div>
+        <>
+            <div>
+                Hello, i am Recipe React component
+            </div>
+            <button onClick={increaseCount}>Increase Count</button>
+            <button onClick={decreaseCount}>Decrease Count</button>
+        </>
     )
 }
 
