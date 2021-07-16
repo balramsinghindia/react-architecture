@@ -8,10 +8,12 @@ const App = () => {
             <h1> Oh hello, This is first React component </h1>
             <main>
                 <section className="hero">
-                    <Recipe />
+                    <Recipe
+                        text="Hello, i am Recipe React component from Props"
+                    />
                 </section>
             </main>
-            <Footer/>
+            <Footer copyrightText="Copyright@2021" />
         </>
     )
 }

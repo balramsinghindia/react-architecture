@@ -1,7 +1,7 @@
 
-export function Footer(){
+export function Footer({copyrightText}){
     return (
-        <h3>Copyright@2021</h3>
+        <h3>{copyrightText}</h3>
     );  
 };
 
