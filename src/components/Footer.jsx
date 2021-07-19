@@ -1,9 +1,6 @@
-const Footer = () => {
-  return (
-    <div>    
-      <sub>Copyright 2021</sub>
-    </div>    
-  )
-}
 
-export default Footer;
+// export function Footer({copyrightText}){
+//     return (
+//         <h3>{copyrightText}</h3>
+//     );  
+// };
