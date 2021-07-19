@@ -6,11 +6,8 @@ import {useState} from 'react';
 
 const App = () => {
     const [counter,setCounter]= useState(0);
-   console.log(counter);
-
+  
     function increment(){
-        console.log('increment is called');
-        console.log(counter);
         setCounter(counter + 1);
     }
 
@@ -35,12 +32,12 @@ const App = () => {
                     />
                 </section>
             </main>
-            <Footer copyrightText="Copyright@2021" />
-            <Counter
-            counter={counter}
-            increment={increment}
-            decrement={decrement}
-            reset = {reset}
+                        <Footer copyrightText="Copyright@2021" />
+                        <Counter
+                        counter={counter}
+                        increment={increment}
+                        decrement={decrement}
+                        reset = {reset}
              />
         </>
     )

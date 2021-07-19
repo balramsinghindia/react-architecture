@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Counter } from "./Counter";
 
 let technologies = {
     frontend: ['js', 'css', 'html', 'typescript'],
@@ -13,25 +12,21 @@ let receipe = {
     welcome: true
 }
 
-const Recipe = (props) => {
+const Recipe = ({increment, decrement, reset, counter}) => {
     const [abc, setAbc] = useState({});
-    // const [countValue, setCountValue] = useState(0);
-    // console.log(countValue);
     return (
-        <div>
-            {/* {text} */}
+        <>
             <h3>Current Recipe:</h3>
             <button onClick={()=>setAbc(technologies)}>Recipes</button>
             <button onClick={()=>setAbc(receipe)}>Technologies</button>
             <ul>
                 { Object.keys(abc).map((material) => <li>{material}: {abc[material]}</li> )}
             </ul>
-            {/* <Header /> */}
-            <button onClick={props.increment}>RecipeIncrement</button>
-            <button onClick={props.decrement}>RecipeDecrement</button>
-            <button onClick={props.reset}>RecipeReset</button>
             
-        </div>
+            <button onClick={increment}>RecipeIncrement</button>
+            <button onClick={decrement}>RecipeDecrement</button>
+            <button onClick={reset}>RecipeReset</button>
+        </>
     )
 }
 
