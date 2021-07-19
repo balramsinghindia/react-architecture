@@ -14,8 +14,7 @@ const App = () => {
                     <Recipe
                         text="Hello, i am Recipe React component from Props"
                     />
-                    <Counter />
-                    {/* data={(counter+1), (counter+2)} */}
+                    <Counter/>                    
                 </section>
             </main>
             {/* <Footer copyrightText="Copyright@2021" /> */}

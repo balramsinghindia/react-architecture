@@ -19,12 +19,15 @@ const Recipe = ({text}) => {
         <div>
             {text}
             <h3>Current Recipe:</h3>
+            <button onClick={()=>setCounter(counter+1)}> Increase </button>
+            <button onClick={()=>setCounter(counter-1)}> Decrease </button>
+            
             <button onClick={()=>setAbc(technologies)}>Recipes</button>
-            <button onClick={()=>setAbc(receipe)}>Technologies</button>
+            <button onClick={()=>setAbc(receipe)}>Technologies</button>            
             <ul>
                 { Object.keys(abc).map((material) => <li>{material}: {abc[material]}</li> )}
             </ul>
-            <Header />
+            {/* <Header /> */}
             
         </div>
     )
