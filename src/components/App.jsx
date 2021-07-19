@@ -3,10 +3,13 @@ import { Footer } from './Footer';
 import './../scss/index.scss';
 import { Counter } from './Counter';
 import {useState} from 'react';
+import { createContext } from 'react';
+
+const counterContext = React.createContext("hello");   
 
 const App = () => {
-    const [counter,setCounter]= useState(0);
-  
+const [counter,setCounter]= useState(0);
+
     function increment(){
         setCounter(counter + 1);
     }
@@ -18,6 +21,7 @@ const App = () => {
     function reset(){
         setCounter(0);
     }
+ 
     return (
         <>
             <h1> Oh hello, This is first React component </h1>
@@ -29,16 +33,20 @@ const App = () => {
                         increment={increment}
                         decrement= {decrement}
                         reset = {reset}
-                    />
+                        />
                 </section>
-            </main>
-                        <Footer copyrightText="Copyright@2021" />
+                <section>
+                        <Footer copyrightText="Copyright@2021"/>
+                        <counterContext.Provider value = {"hello world"} />
                         <Counter
                         counter={counter}
                         increment={increment}
                         decrement={decrement}
-                        reset = {reset}
-             />
+                        reset = {reset}       
+                        />
+                        <counterContext.Provider />
+              </section>
+            </main>        
         </>
     )
 }
