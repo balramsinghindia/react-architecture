@@ -9,6 +9,7 @@ export function Counter({increment, decrement, reset, counter}){
             <button onClick={reset}>Reset Counter</button>
 
             Value of count is {counter}
+            
        </>
     )
 };
