@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CounterContext } from '../contexts/CounterContexts';
 
 let technologies = {
     frontend: ['js', 'css', 'html', 'typescript'],
@@ -12,8 +13,9 @@ let receipe = {
     welcome: true
 }
 
-const Recipe = ({increment, decrement, reset, counter}) => {
+const Recipe = () => {
     const [abc, setAbc] = useState({});
+    const { increment, decrement, reset, isLoggedIn, isHidden, userLogin }= useContext(CounterContext);
     return (
         <>
             <h3>Current Recipe:</h3>
@@ -22,10 +24,16 @@ const Recipe = ({increment, decrement, reset, counter}) => {
             <ul>
                 { Object.keys(abc).map((material) => <li>{material}: {abc[material]}</li> )}
             </ul>
+            {
+                isLoggedIn &&  
+                <>
+                <button onClick={increment}>RecipeIncrement</button>
+                <button onClick={decrement}>RecipeDecrement</button>
+                <button onClick={reset}>RecipeReset</button> 
+                </>
+            }
             
-            <button onClick={increment}>RecipeIncrement</button>
-            <button onClick={decrement}>RecipeDecrement</button>
-            <button onClick={reset}>RecipeReset</button>
+            <button onClick={userLogin} hidden={isHidden}>Login</button>
         </>
     )
 }
