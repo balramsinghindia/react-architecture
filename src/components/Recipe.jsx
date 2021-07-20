@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CounterContext } from '../contexts/CounterContexts';
 
 let technologies = {
     frontend: ['js', 'css', 'html', 'typescript'],
@@ -12,8 +13,9 @@ let receipe = {
     welcome: true
 }
 
-const Recipe = ({increment, decrement, reset, counter}) => {
+const Recipe = () => {
     const [abc, setAbc] = useState({});
+    const { increment, decrement, reset } = useContext(CounterContext);
     return (
         <>
             <h3>Current Recipe:</h3>
