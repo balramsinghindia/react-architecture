@@ -1,17 +1,14 @@
 import { useState } from "react";
 
-// let count = count;
 
-const Counter = () => {
-  // {increment, decrement}
-  const [counter, setCounter] = useState(0);  
+const Counter = ({increment, decrement, counter}) => {  
 
   return(
-    <div>
-        <button onClick={()=>setCounter(counter+1)}> Increase </button>
-        <button onClick={()=>setCounter(counter-1)}> Decrease </button>
+    <>        
+        <button onClick={increment}> Increase </button>
+        <button onClick={decrement}> Decrease </button>
         <p> {counter} </p>
-    </div>
+    </>
   )
 }
 
