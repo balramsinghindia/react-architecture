@@ -1,10 +1,7 @@
-const Footer = ()=>{
-    return(
-        <div className="footer">
-            <p>CopyRight 2021</p>
 
-        </div>
-    )
-}
+export function Footer({copyrightText}){
+    return (
+        <h3>{copyrightText}</h3>
+    );  
+};
 
-export default Footer;
