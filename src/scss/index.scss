@@ -26,3 +26,41 @@ h1 {
     padding: 16px;
     background-color: green;
 }
+
+ul, li {
+    list-style-type: none;
+}
+
+ul li a {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 15px;
+}
+
+.home {
+    display: block;
+    height: 1500px;
+    background-color: blueviolet;
+}
+.about {
+    display: block;
+    height: 1500px;
+    background-color:chocolate;
+}
+.profile {
+    display: block;
+    height: 1500px;
+    background-color:darkgreen;
+}
+
+.not-found {
+    display: block;
+    height: 1500px;
+    background-color:darkviolet;
+}
+.post {
+    display: block;
+    height: 1500px;
+    background-color:yellowgreen;
+}
