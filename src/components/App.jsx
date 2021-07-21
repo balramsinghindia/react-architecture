@@ -1,26 +1,28 @@
-import Recipe from './Recipe';
+import { useContext, useState } from 'react';
 import { Footer } from './Footer';
+import Recipe from './Recipe';
 import './../scss/index.scss';
 import { Counter } from './Counter';
-import CounterContextProvider from'../contexts/CounterContexts';
+import CounterContextProvider, {
+  CounterContext,
+} from '../contexts/CounterContexts';
 
 const App = () => {
-   
-    return (
-        <CounterContextProvider>
-            <h1> Oh hello, This is first React component </h1>
-            <main>
-                <section className="hero">
-                    <Recipe
-                        text="Hello, i am Recipe React component from Props"
-                    />
-                </section>
-            </main>
-                        <Footer copyrightText="Copyright@2021" />
-                        <Counter/>
+  const { loginHandler, isLoggedIn } = useContext(CounterContext);
 
-        </CounterContextProvider>
-    )
-}
+  return (
+    <>
+      <h1> Oh hello, This is first React component </h1>
+      <main>
+        {!isLoggedIn && <button onClick={loginHandler}>Login</button>}
+
+        <section className="hero">
+          <Recipe />
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+};
 
 export default App;
