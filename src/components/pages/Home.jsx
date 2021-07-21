@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 
-export default function Home(){
+export default function Home({match}){
     useEffect(()=> {
         window.scroll(0, 0);
     }, []);
+    console.log(match);
     return (
         <>
             <h3>Home Page</h3>

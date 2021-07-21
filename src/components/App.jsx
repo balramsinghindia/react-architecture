@@ -12,6 +12,7 @@ import Profile from './pages/Profile';
 import Header from './Header';
 import NotFound from './pages/NotFound';
 import Post from './pages/Post';
+import { Contact } from './pages/Contact';
 
 
 
@@ -38,6 +39,9 @@ const App = () => {
                     <Route path='/profile' component={Profile} />
                     
                     <Route path='/post/:id' component={Post} />
+                    <Route exact path='/hi'>
+                        { true ? <Redirect to="/contact" /> : <Home /> }
+                    </Route>
                     <Route component={NotFound} />
                 </Switch> 
                 
