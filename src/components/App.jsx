@@ -34,7 +34,7 @@ const App = () => {
                     <Route path='/about' component={About} />
                     <Route path='/profile' component={Profile} />
                     
-                    { false ? <Route path='/post/:id' component={Post} /> : <Redirect to ="/" /> }
+                    <Route path='/post/:id' component={Post} />
                     <Route component={NotFound} />
                 </Switch> 
                 
