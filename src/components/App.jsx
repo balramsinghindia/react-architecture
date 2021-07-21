@@ -1,27 +1,44 @@
 import { useContext, useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { useCallback } from 'react';
+import Recipe from './Recipe';
 import { Footer } from './Footer';
 import Recipe from './Recipe';
 import './../scss/index.scss';
 import { Counter } from './Counter';
-import CounterContextProvider, {
-  CounterContext,
-} from '../contexts/CounterContexts';
+import CounterContextProvider from '../contexts/CounterContexts';
+import Home from './pages/Home';
+import About from './pages/About';
+import Profile from './pages/Profile';
+import Header from './header';
+import NotFound from './pages/NotFound';
+import Post from './pages/Post';
 
 const App = () => {
-  const { loginHandler, isLoggedIn } = useContext(CounterContext);
-
   return (
-    <>
-      <h1> Oh hello, This is first React component </h1>
-      <main>
-        {!isLoggedIn && <button onClick={loginHandler}>Login</button>}
+    <BrowserRouter>
+      {/* <h1> Oh hello, This is first React component </h1>
+                <main>
+                    <section className="hero">
+                        <Recipe
+                            text="Hello, i am Recipe React component from Props"
+                        />
+                    </section>
+                </main>
+                <Counter/> */}
 
-        <section className="hero">
-          <Recipe />
-        </section>
-      </main>
-      <Footer />
-    </>
+      <Header />
+
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/about" component={About} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/post" component={Post} />
+        <Route component={NotFound} />
+      </Switch>
+
+      <Footer copyrightText="Copyright@2021" />
+    </BrowserRouter>
   );
 };
 
