@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'; 
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'; 
 import { useCallback } from 'react';
 import Recipe from './Recipe';
 import { Footer } from './Footer';
@@ -33,7 +33,8 @@ const App = () => {
                     <Route path='/' component={Home} exact />
                     <Route path='/about' component={About} />
                     <Route path='/profile' component={Profile} />
-                    <Route path='/post/:id' component={Post} />
+                    
+                    { false ? <Route path='/post/:id' component={Post} /> : <Redirect to ="/" /> }
                     <Route component={NotFound} />
                 </Switch> 
                 
