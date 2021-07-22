@@ -39,7 +39,7 @@ const App = () => {
                     <Route path='/profile' component={Profile} />
                     
                     <Route path='/post/:id' component={Post} />
-                    <Route path='/contact' component={Contact} />
+                    <Route path='/contact/:text' component={Contact} />
                     <Route path='/:id' children = {<Contact/>} />
                     <Route path='/hi'>
                         { true ? <Contact/> : <Home /> }
