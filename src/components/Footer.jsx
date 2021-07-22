@@ -12,6 +12,7 @@ export function Footer({copyrightText}){
                     <Link to="/profile" title="Profile">Profile</Link>
                     <Link to="/post" title="Post">Post</Link>
                     <Link to="/contact" title="contact">Contact</Link>
+                    <Link to = "/newURL" title="newURL">Children</Link>
                 </li>
             </ul>
         </>

@@ -40,6 +40,7 @@ const App = () => {
                     
                     <Route path='/post/:id' component={Post} />
                     <Route path='/contact' component={Contact} />
+                    <Route path='/:id' children = {<Contact/>} />
                     <Route path='/hi'>
                         { true ? <Contact/> : <Home /> }
                     </Route>
