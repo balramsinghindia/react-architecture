@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router';
 
-export const Contact = () => {
+export const Contact = (match) => {
 
     let history = useHistory();
 
@@ -18,7 +18,7 @@ export const Contact = () => {
            <h3>contact us mail : www.abc.com </h3>
            <button onClick={handlerBack}>Back To Profile</button>
 
-           <h3>useParams value is <span className="param"> {id}</span></h3>
+           <h3>useParams value is {match.params}<span className="param"> {id}</span></h3>
         </>   
 
     )

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useParams } from 'react-router';
 
 export default function Header(){
@@ -14,8 +14,8 @@ export default function Header(){
             </li>
             <li>
                 <h3 className="param">Nested Routes</h3>
-                <Link to="/fruits">Fruits</Link>
-                <Link to="/vegetables">Vegetables</Link>
+                <NavLink to="/fruits" >Fruits</NavLink>
+                <NavLink to="/vegetables">Vegetables</NavLink>
             </li>
         </ul>
     );  
