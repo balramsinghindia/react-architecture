@@ -14,7 +14,7 @@ export default function Header(){
             </li>
             <li>
                 <h3 className="param">Nested Routes</h3>
-                <NavLink to="/fruits" >Fruits</NavLink>
+                <NavLink to="/fruits" activeClassName={'active'}>Fruits</NavLink>
                 <NavLink to="/vegetables">Vegetables</NavLink>
             </li>
         </ul>
