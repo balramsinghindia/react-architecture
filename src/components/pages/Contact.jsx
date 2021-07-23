@@ -17,7 +17,8 @@ export const Contact = () => {
         <>
            <h3>contact us mail : www.abc.com </h3>
            <button onClick={handlerBack}>Back To Profile</button>
-           <h3 className="param">useParams value is{id}</h3>
+
+           <h3>useParams value is <span className="param"> {id}</span></h3>
         </>   
 
     )

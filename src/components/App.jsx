@@ -13,6 +13,8 @@ import Header from './Header';
 import NotFound from './pages/NotFound';
 import Post from './pages/Post';
 import { Contact } from './pages/Contact';
+import { Fruits} from './pages/Fruits';
+import { Vegetables } from './pages/Vegetables';
 
 
 
@@ -34,17 +36,24 @@ const App = () => {
                 <Header />
 
                 <Switch>
+                    <Route path="/fruits">
+                        <Fruits />
+                     </Route>  
+                    <Route path="/vegetables">
+                        <Vegetables />
+                     </Route>  
                     <Route path='/' component={Home} exact />
                     <Route path='/about' component={About} />
                     <Route path='/profile' component={Profile} />
                     
                     <Route path='/post/:id' component={Post} />
-                    <Route path='/contact/:text' component={Contact} />
+                    <Route path='/contact' component={Contact} />
                     <Route path='/:id' children = {<Contact/>} />
                     <Route path='/hi'>
                         { true ? <Contact/> : <Home /> }
                     </Route>
                     <Route component={NotFound} />
+                     
                 </Switch> 
                 
                 
