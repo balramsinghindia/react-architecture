@@ -13,9 +13,11 @@ export default function Header(){
                 <Link to = "/newURL" title="newURL">Children</Link>
             </li>
             <li>
+                <hr></hr>
                 <h3 className="param">Nested Routes</h3>
                 <NavLink to="/fruits" activeClassName={'active'}>Fruits</NavLink>
                 <NavLink to="/vegetables">Vegetables</NavLink>
+                <hr></hr>
             </li>
         </ul>
     );  
