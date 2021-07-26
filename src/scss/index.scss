@@ -1,62 +1,60 @@
 @import 'variables';
 @import '_color';
 @import '_global';
-
+// @import 'Carousel';
 
 body {
-    background-color: $body-bg;
-    font-size: 16px;
+  background-color: $body-bg;
+  font-size: 16px;
 }
 
 h1 {
-    color: var(--text);
-    font-size: 40px;
-    line-height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  color: var(--text);
+  font-size: 40px;
+  line-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-
-
-    background-color: aqua;
-    border-radius: 10px;
+  background-color: aqua;
+  border-radius: 10px;
 }
 
-
-ul, li {
-    list-style-type: none;
+ul,
+li {
+  list-style-type: none;
 }
 
 ul li a {
-    display: inline-block;
-    font-size: 16px;
-    text-decoration: none;
-    margin: 15px;
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 15px;
 }
 
 .home {
-    display: block;
-    height: 1500px;
-    background-color: blueviolet;
+  display: block;
+  height: 1500px;
+  background-color: blueviolet;
 }
 .about {
-    display: block;
-    height: 1500px;
-    background-color:chocolate;
+  display: block;
+  height: 1500px;
+  background-color: chocolate;
 }
 .profile {
-    display: block;
-    height: 1500px;
-    background-color:darkgreen;
+  display: block;
+  height: 1500px;
+  background-color: darkgreen;
 }
 
 .not-found {
-    display: block;
-    height: 1500px;
-    background-color:darkviolet;
+  display: block;
+  height: 1500px;
+  background-color: darkviolet;
 }
 .post {
-    display: block;
-    height: 1500px;
-    background-color:yellowgreen;
+  display: block;
+  height: 1500px;
+  background-color: yellowgreen;
 }
