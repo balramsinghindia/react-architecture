@@ -11,6 +11,7 @@ export default function Header(){
                 <Link to="/post/random" title="Post">Post</Link>
                 <Link to="/contact" title="contact">Contact</Link>
                 <Link to = "/newURL" title="newURL">Children</Link>
+                <Link to = "/carousel" title="carousel">Carousel</Link>
             </li>
             <li>
                 <hr></hr>

@@ -15,14 +15,15 @@ import Post from './pages/Post';
 import { Contact } from './pages/Contact';
 import { Fruits} from './pages/Fruits';
 import { Vegetables } from './pages/Vegetables';
+import { Carousel } from './Carousel';
 
 
 
 const App = () => {
     
     return (
-        <BrowserRouter>
-            <CounterContextProvider>
+        <BrowserRouter forceRefresh={true}>
+            <CounterContextProvider >
                 {/* <h1> Oh hello, This is first React component </h1>
                 <main>
                     <section className="hero">
@@ -42,6 +43,9 @@ const App = () => {
                     <Route path="/vegetables">
                         <Vegetables />
                      </Route>  
+                     <Route path="/carousel">
+                         <Carousel />
+                     </Route>
                     <Route path='/' component={Home} exact />
                     <Route path='/about' component={About} />
                     <Route path='/profile' component={Profile} />
