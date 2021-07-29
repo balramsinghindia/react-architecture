@@ -35,6 +35,10 @@ ul li a {
 	display: block;
 	height: 1500px;
 	background-color: blueviolet;
+    text-align: center;
+    img {
+        margin-bottom: 20px;
+    }
 }
 .about {
 	display: block;
@@ -63,6 +67,7 @@ ul li a {
     width: 300px;
     min-height: 150px;
     background-size: cover;
+    margin: 20px auto;
 }
 	
 h2 {

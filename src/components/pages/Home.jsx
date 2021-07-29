@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import cat from '../../images/cat.jpg';
 
 export default function Home(){
     useEffect(()=> {
@@ -10,6 +11,7 @@ export default function Home(){
             <div className="home">
                 hello i am home
                 <div className="mountain"></div>
+                <img src={cat} alt="cat" title="Cat" width="500" />
             </div>
         </>
     );  
