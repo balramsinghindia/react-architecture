@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 import '../scss/Carousel.scss';
+import cat from "../images/cat.jpg";
+import mountain from "../images/mountain.jpg";
+import sphere from "../images/sphere1.jpg";
 
 const Carousel = () => {
   const [currentImageNumber, setCurrentImageNumber] = useState(1);
@@ -16,7 +19,7 @@ const Carousel = () => {
 
           return lastVal;
         });
-      }, 1000);
+      }, 20000);
 
       return () => {
         clearInterval(intervalRef);
@@ -74,13 +77,22 @@ const Carousel = () => {
     >
       {/* <img src={`assets/carousel-${currentImageNumber}.jpg`} /> */}
       {currentImageNumber === 1 && (
-        <div className="img img--1">This is slide one</div>
+        <div className="img img--1">
+          <img src={cat} alt="image-1"/>
+          <span>This is slide one</span>
+        </div>
       )}
       {currentImageNumber === 2 && (
-        <div className="img img--2">This is slide two</div>
+        <div className="img img--2">
+          <img src={mountain} alt="image-2"/>
+          <span>This is slide two</span>
+        </div>
       )}
       {currentImageNumber === 3 && (
-        <div className="img img--3">This is slide three</div>
+        <div className="img img--3">
+          <img src={sphere} alt="image-3"/>
+          <span>This is slide three</span>
+        </div>
       )}
 
       <button type="button" className="btn btn--next" onClick={nextHandler}>
