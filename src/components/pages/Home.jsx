@@ -9,6 +9,7 @@ export default function Home(){
             <h3>Home Page</h3>
             <div className="home">
                 hello i am home
+                <div className="mountain"></div>
             </div>
         </>
     );  
