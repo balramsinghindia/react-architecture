@@ -29,6 +29,11 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 55*1024
+                    }
+                }
             }
         ]
     },
