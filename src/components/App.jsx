@@ -1,10 +1,11 @@
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'; 
+import { useContext, useState } from 'react';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { useCallback } from 'react';
-import Recipe from './Recipe';
 import { Footer } from './Footer';
+import Recipe from './Recipe';
 import './../scss/index.scss';
 import { Counter } from './Counter';
-import CounterContextProvider from'../contexts/CounterContexts';
+import CounterContextProvider from '../contexts/CounterContexts';
 import Home from './pages/Home';
 import About from './pages/About';
 import Profile from './pages/Profile';

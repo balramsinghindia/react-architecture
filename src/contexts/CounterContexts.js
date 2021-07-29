@@ -1,29 +1,40 @@
-import { useState, createContext } from "react";
+import { useState, createContext } from 'react';
 
 export const CounterContext = createContext();
 
 function CounterContextProvider(props) {
+  const [counter, setCounter] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    const [counter, setCounter]= useState(0);
-  
-    function increment(){
-        setCounter(counter + 1);
-    }
+  const loginHandler = () => {
+    setIsLoggedIn(true);
+  };
 
-    function decrement(){
-        setCounter(counter - 1);
-    }
+  function increment() {
+    setCounter(counter + 1);
+  }
 
-    function reset(){
-        setCounter(0);
-    }
-    const value = { counter, increment, decrement, reset }
+  function decrement() {
+    setCounter(counter - 1);
+  }
 
-    return(
-        <CounterContext.Provider value={value}>
-            {props.children}
-        </CounterContext.Provider>
-    )
+  function reset() {
+    setCounter(0);
+  }
+  const value = {
+    counter,
+    increment,
+    decrement,
+    reset,
+    isLoggedIn,
+    loginHandler,
+  };
+
+  return (
+    <CounterContext.Provider value={value}>
+      {props.children}
+    </CounterContext.Provider>
+  );
 }
 
 export default CounterContextProvider;

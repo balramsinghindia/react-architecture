@@ -1,89 +1,60 @@
-@import "variables";
-@import "_color";
-@import "_global";
+@import 'variables';
+@import '_color';
+@import '_global';
+// @import 'Carousel';
 
 body {
-	background-color: $body-bg;
-	font-size: 16px;
+  background-color: $body-bg;
+  font-size: 16px;
 }
 
 h1 {
-	color: var(--text);
-	font-size: 40px;
-	line-height: 60px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  color: var(--text);
+  font-size: 40px;
+  line-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-	background-color: aqua;
-	border-radius: 10px;
+  background-color: aqua;
+  border-radius: 10px;
 }
 
-.footer{
-    padding: 16px;
-    background-color: green;
-}
-
-ul, li {
-    list-style-type: none;
+ul,
+li {
+  list-style-type: none;
 }
 
 ul li a {
-	display: inline-block;
-	font-size: 16px;
-	text-decoration: none;
-	margin: 15px;
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 15px;
 }
 
 .home {
-	display: block;
-	height: 1500px;
-	background-color: blueviolet;
-    text-align: center;
-    img {
-        margin-bottom: 20px;
-    }
+  display: block;
+  height: 1500px;
+  background-color: blueviolet;
 }
 .about {
-	display: block;
-	height: 1500px;
-	background-color: chocolate;
+  display: block;
+  height: 1500px;
+  background-color: chocolate;
 }
 .profile {
-	display: block;
-	height: 1500px;
-	background-color: darkgreen;
+  display: block;
+  height: 1500px;
+  background-color: darkgreen;
 }
 
 .not-found {
-	display: block;
-	height: 1500px;
-	background-color: darkviolet;
+  display: block;
+  height: 1500px;
+  background-color: darkviolet;
 }
 .post {
-    display: block;
-    height: 1500px;
-    background-color:yellowgreen;
-}
-
-.mountain {
-    background-image: url("../images/mountain.jpg");
-    width: 300px;
-    min-height: 150px;
-    background-size: cover;
-    margin: 20px auto;
-}
-	
-h2 {
-	background-color: purple;
-	color: white;
-	padding: 50px;
-}
-
-.active {
-	display: block;
-}
-
-.inactive {
-	display: none;
+  display: block;
+  height: 1500px;
+  background-color: yellowgreen;
 }
