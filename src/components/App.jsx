@@ -11,9 +11,9 @@ import Profile from './pages/Profile';
 import Header from './Header';
 import NotFound from './pages/NotFound';
 import Post from './pages/Post';
+import Carousel from './pages/Carousel';
 
-const App = () => {
-   
+const App = () => {    
     return (
         <BrowserRouter>
             <CounterContextProvider>
@@ -35,6 +35,7 @@ const App = () => {
                     <Route path='/profile' component={Profile} />
                     
                     <Route path='/post/:id' component={Post} />
+                    <Route path='/carousel' component={Carousel} />
                     <Route component={NotFound} />
                 </Switch> 
                 
