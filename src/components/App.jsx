@@ -1,5 +1,9 @@
 import Recipe from './Recipe';
 import './../scss/index.scss';
+import Footer from './Footer';
+import Carousel from './Carousel';
+import Form from './Form';
+
 
 const App = () => {
     return (
@@ -8,8 +12,11 @@ const App = () => {
             <main>
                 <section className="hero">
                     <Recipe />
+                    <Carousel/>
                 </section>
             </main>
+            <Form/>
+            <Footer/>
         </>
     )
 }
