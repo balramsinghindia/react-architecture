@@ -4,7 +4,7 @@
 
 
 body {
-    background-color: $body-bg;
+    // background-color: $body-bg;
     font-size: 16px;
 }
 
@@ -99,4 +99,32 @@ ul li a {
     padding: 1em;
     text-align: center;
     align-self: center; 
+}
+
+* input{
+    display: block;
+    margin: 1em;
+}
+
+label{
+    display: block;
+    margin: 1em;
+}
+
+input[type=checkbox]{
+  display:inline;
+}
+
+.checkbox-label{
+    display: inline !important;
+}
+.checkbox-section{
+    display: flex !important;
+}
+
+.danger{
+    color: red;
+    font-size:small;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
 }

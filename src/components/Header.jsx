@@ -12,13 +12,15 @@ export default function Header(){
                 <Link to="/contact" title="contact">Contact</Link>
                 <Link to = "/newURL" title="newURL">Children</Link>
                 <Link to = "/carousel" title="carousel">Carousel</Link>
+                <Link to="/Form" title="form">Form</Link>
+
             </li>
             <li>
-                <hr></hr>
+                {/* <hr></hr>
                 <h3 className="param">Nested Routes</h3>
                 <NavLink to="/fruits" activeClassName={'active'}>Fruits</NavLink>
                 <NavLink to="/vegetables">Vegetables</NavLink>
-                <hr></hr>
+                <hr></hr> */}
             </li>
         </ul>
     );  

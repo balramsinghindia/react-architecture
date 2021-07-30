@@ -16,6 +16,7 @@ import { Contact } from './pages/Contact';
 import { Fruits} from './pages/Fruits';
 import { Vegetables } from './pages/Vegetables';
 import { Carousel } from './Carousel';
+import { MyForm} from './Form';
 
 
 
@@ -37,14 +38,17 @@ const App = () => {
                 <Header />
 
                 <Switch>
-                    <Route path="/fruits">
+                    {/* <Route path="/fruits">
                         <Fruits />
                      </Route>  
                     <Route path="/vegetables">
                         <Vegetables />
-                     </Route>  
+                     </Route>   */}
                      <Route path="/carousel">
                          <Carousel />
+                     </Route>
+                     <Route path="/Form">
+                         <MyForm/>
                      </Route>
                     <Route path='/' component={Home} exact />
                     <Route path='/about' component={About} />
@@ -61,7 +65,7 @@ const App = () => {
                 </Switch> 
                 
                 
-                <Footer copyrightText="Copyright@2021" />
+                {/* <Footer copyrightText="Copyright@2021" /> */}
                 
 
 
