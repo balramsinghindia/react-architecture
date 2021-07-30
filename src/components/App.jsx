@@ -13,6 +13,7 @@ import Header from './Header';
 import NotFound from './pages/NotFound';
 import Post from './pages/Post';
 import Carousel from './pages/Carousel';
+import Form from './pages/Form';
 
 const App = () => {    
     return (
@@ -37,6 +38,7 @@ const App = () => {
                     
                     <Route path='/post/:id' component={Post} />
                     <Route path='/carousel' component={Carousel} />
+                    <Route path='/form' component={Form}/>
                     <Route component={NotFound} />
                 </Switch> 
                 

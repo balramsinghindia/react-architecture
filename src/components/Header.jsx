@@ -10,6 +10,7 @@ export default function Header(){
                 <Link to="/profile" title="Profile">Profile</Link>
                 <Link to="/post/random" title="Post">Post</Link>
                 <Link to="/carousel" title="Carousel">Carousel</Link>
+                <Link to="/form" title="Form">Form</Link>
             </li>
         </ul>
     );  
