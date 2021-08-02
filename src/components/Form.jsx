@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { Input } from './Input';
+import { Label } from './Label';
 
 export function MyForm(){
 
@@ -59,6 +61,38 @@ export function MyForm(){
      }
     }
 
+    function ValidateLastName(value){
+        console.log(value);
+    }
+
+    // function ValidateLastName(){
+    //     let getInputValue = document.getElementById('lastName').value;
+
+    //     if(getInputValue){
+
+    //         document.getElementById('err-lastname').innerHTML="";
+    //         document.getElementById('lastName').style.borderColor="";
+    
+    //              for(let i=0 ; i < getInputValue.length ; i++) {
+    //                 if((getInputValue[i]<'A'||getInputValue[i]>'Z') && (getInputValue[i]<'a'||getInputValue[i]>'z')){
+    //                     document.getElementById('err-lastname').innerHTML="Last-Name should contain only characters";
+    //                     document.getElementById('lastName').style.borderColor="red";
+    //                 }
+    //             }
+    //             if((getInputValue.length > 30)  ) {
+    //                  document.getElementById('err-lastname').innerHTML="Last-Name should be within 30 characters only";  
+    //                  document.getElementById('lastName').style.borderColor="red";
+    //                 console.log("First-Name should be within 24 characters only");
+    //             }
+    //         }
+    
+    //         else {
+    //             document.getElementById('err-lastname').innerHTML="Name cannot be empty";  
+    //             document.getElementById('lastName').style.borderColor="red";
+    //         }
+
+    // }
+
 //     function validatePhone(){
 
 //         let getInputValue=document.getElementById('phone').value.toString();
@@ -99,7 +133,7 @@ export function MyForm(){
                 <p id="err-three" className="danger"></p>
 
                 <label htmlFor="phone">Phone :</label>
-                <input type="tel" id="phone" name="phone" onBlur={validatePhone}/>
+                <input type="tel" id="phone" name="phone" />
                 <p id="err-four" className="danger"></p>
                 <label htmlFor="city">City:</label>
                <select>
@@ -131,6 +165,16 @@ export function MyForm(){
                 <label htmlFor="termsAndConditions" className="checkbox-label">I Agree to this terms &#38; conditions</label>
                 <input type="checkbox" name="termsAndConditions" id="termsAndConditions" />
                 </div>
+                <Label LabelValue="LastName :"/>
+                <Input Type="text" 
+                Name="lastName" 
+                Id="lastName" 
+                Placeholder = "Please Enter your Last Name" 
+                OnchangeHandler={ValidateLastName} 
+                required={'true'}
+                maxlength={30}
+                 />
+                <p id="err-lastname" className="danger"></p>
 
                 <button type="submit" onClick={validateName}>Submit</button>
             </fieldset>
