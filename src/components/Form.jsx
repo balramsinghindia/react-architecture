@@ -26,6 +26,10 @@ const Form = () => {
                     label="Name: "
                     validator={[
                         {
+                            check: ['required'],
+                            message: 'Name field can\'t be emtpy'
+                        },
+                        {
                             check: ['regex', nameRegex],
                             message: "Regex custom message for name"
                         },

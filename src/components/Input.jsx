@@ -1,29 +1,25 @@
 import './../scss/index.scss';
 import {useEffect, useState} from 'react';
+import { validateInput } from './Validator';
+
 const Input =  ({label,inputType,inputName,validator, handleChange}) => {
     const [error , setError] = useState('');
     function handleInputChange(e) {
-        const {name , value } = e.target;
-        if(validator[0].check[0]==='regex'){
-            if(!(validator[0].check[1].test(value))) {
-                setError(validator[0].message);
-            } else {
-                if(validator[1].check[0] === 'maxLength'){
-                    if(value.length >(validator[1].check[1])){
-                        setError(validator[1].message);
-                    }else{
-                        setError('');
-                        handleChange(value);
-                    }
-                }
-            }
-        }
-        
+        const { value } = e.target;
+        const validation = validateInput(value, validator);
+        setError(validation);        
     }
+
+   
+
     return (
         <div>
             <label>{label}</label>
-            <input type={inputType} name={inputName} onBlur={handleInputChange}/>
+            <input
+                type={inputType}
+                name={inputName}
+                onBlur={handleInputChange}
+            />
             <div className="error">
                 {error}
             </div>
