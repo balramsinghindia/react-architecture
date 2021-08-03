@@ -1,6 +1,5 @@
 import './../scss/index.scss';
 import {useEffect, useState} from 'react';
-
 const Input =  ({label,inputType,inputName,validator, handleChange}) => {
     const [error , setError] = useState('');
     function handleInputChange(e) {
@@ -9,10 +8,17 @@ const Input =  ({label,inputType,inputName,validator, handleChange}) => {
             if(!(validator[0].check[1].test(value))) {
                 setError(validator[0].message);
             } else {
-                setError('');
-                handleChange(value)
+                if(validator[1].check[0] === 'maxLength'){
+                    if(value.length >(validator[1].check[1])){
+                        setError(validator[1].message);
+                    }else{
+                        setError('');
+                        handleChange(value);
+                    }
+                }
             }
         }
+        
     }
     return (
         <div>
