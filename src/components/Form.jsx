@@ -11,6 +11,10 @@ const Form = () => {
     const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const phoneRegex = /^\d+$/;
     const  nameRegex = /[a-zA-z]{1,30}/;
+
+    function handleChange(value){
+        console.log("value", value);
+    }
     
      return (
         <>
@@ -20,21 +24,33 @@ const Form = () => {
                     inputType="text" 
                     inputName="name" 
                     label="Name: "
-                    regex ={nameRegex}
+                    validator={[
+                        {
+                            check: ['regex', nameRegex],
+                            message: "Regex custom message for name"
+                        },
+                        {
+                            check: ['maxLength', 20],
+                            message: "Name should be less than 20 characters"
+                        }
+                    ]}
+                    handleChange={handleChange}
                     />
 
-                    <Input 
+                    {/* <Input 
                     inputType="Email" 
                     inputName="email" 
                     label="Email: " 
                     regex= {emailRegex}
+                    handleChange={handleChange}
                     />
 
                     <Input inputType="Number" 
                     inputName="phone" 
                     label="Phone: " 
                     regex = {phoneRegex}
-                    />
+                    handleChange={handleChange}
+                    /> */}
                     {/* <DropDown
                     value={cities}
                     label="City :"
