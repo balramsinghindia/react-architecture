@@ -1,6 +1,6 @@
-import './../scss/index.scss';
+import './../../scss/index.scss';
 import {useEffect, useState} from 'react';
-import { validateInput } from './Validator';
+import { validateInput } from '../utilities/Validator';
 
 const Input =  ({label,inputType,inputName,validator, handleChange}) => {
     const [error , setError] = useState('');

@@ -1,7 +1,7 @@
-import './../scss/index.scss';
+import './../../scss/index.scss';
 import {useEffect, useState} from 'react';
-import Input from './Input';
-import DropDown from './DropDown';
+import Input from '../atom/Input';
+import DropDown from '../atom/DropDown';
 
 
 const Form = () => {
