@@ -35,7 +35,7 @@ const Form = () => {
                     label="Phone: " 
                     regex = {phoneRegex}
                     />
-                    <DropDown
+                    {/* <DropDown
                     value={cities}
                     label="City :"
                     /> 
@@ -59,7 +59,7 @@ const Form = () => {
                 <label>
                     Terms & Condition : 
                     <input type="checkbox" name="tnc"  required/>
-                </label> */} */}
+                </label> */} 
                 {/* <input type="submit" value="Submit"/> */}
             </form>
         </>
