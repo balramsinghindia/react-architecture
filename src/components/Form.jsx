@@ -1,112 +1,66 @@
 import './../scss/index.scss';
 import {useEffect, useState} from 'react';
-import {
-    nameCheck,
-    emailCheck,
-    phoneCheck,
-} from '../Validation';
+import Input from './Input';
+import DropDown from './DropDown';
 
 
 const Form = () => {
     var cities = ['Indore','Bhopal','Jaipur','Lucknow','Ahemdabad','Pune','Mumbai','Washington','LA','San Francisco','Columbus'];
     var States = ['Uttar Pradesh','Madhaya Pradesh','Maharashtra','Gujarat','Rajasthan','Washington DC','Ohio','California'];
     var Countries = ['India','USA'];
-    const  [user , setUser] = useState({});
-    function handleChange(e) {
-        const {name , value } = e.target;
-        switch (name){
-            case 'name':
-                if(nameCheck(value))
-                    setUser({...user , name:value});
-                else
-                    console.log('Name is invalid');
-                break;
-            case 'email':
-                if(emailCheck(value))
-                    setUser({...user , email:value});
-                else
-                    console.log('Email invalid');
-                break;
-            case 'phone':
-                if(phoneCheck(value))
-                    setUser({...user , phone:value});
-                else
-                    console.log('invalid Phone');
-                break;
-            case 'city':
-                setUser({...user , city:value});
-                break;  
-            case 'country':
-                setUser({...user , country:value});
-                break;
-            case 'state':
-                setUser({...user , state:value});
-                break;
-            case 'gender':
-                setUser({...user , gender:value});
-                break;
-            case 'tnc':
-                setUser({...user , tnc:value});
-                break;  
-            default:
-                break;        
-        }
-    }
-    console.log(user);
+    const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const phoneRegex = /^\d+$/;
+    const  nameRegex = /[a-zA-z]{1,30}/;
+    
      return (
         <>
             <h1>Form</h1>
             <form>
-                <label>
-                    Name : 
-                    <input type="text" name="name" onBlur={handleChange}/>
-                </label>
-                <label>
-                    Email : 
-                    <input type="Email" name="email" onBlur={handleChange}/>
-                </label>            
-                <label>
-                    Phone : 
-                    <input type="number" name="phone" onBlur={handleChange}/>
-                </label> 
-                          
-                <label>
-                    City : 
-                    <select name="city" onBlur={handleChange}>
-                        {cities.map((city,index)=>{
-                            return (<option key={index}>{city}</option>)
-                        })}
-                    </select>
-                </label>             
-                <label>
-                    State : 
-                    <select name="state" onBlur={handleChange}>
-                        {States.map((state,index)=>{
-                            return <option key={index}>{state}</option>
-                        })}
-                    </select>
-                </label>            
-                <label>
-                    Country : 
-                    <select name="country" onBlur={handleChange}>
-                        {Countries.map((country,index)=>{
-                            return <option key={index}>{country}</option>
+                    <Input 
+                    inputType="text" 
+                    inputName="name" 
+                    label="Name: "
+                    regex ={nameRegex}
+                    />
 
-                        })}
-                    </select>
-                </label>            
-                <label>
+                    <Input 
+                    inputType="Email" 
+                    inputName="email" 
+                    label="Email: " 
+                    regex= {emailRegex}
+                    />
+
+                    <Input inputType="Number" 
+                    inputName="phone" 
+                    label="Phone: " 
+                    regex = {phoneRegex}
+                    />
+                    <DropDown
+                    value={cities}
+                    label="City :"
+                    /> 
+                    
+                    <DropDown
+                    value={States}
+                    label="State :"
+                    /> 
+                    <DropDown
+                    value={Countries}
+                    label="Country :"
+                    />               
+                           
+                {/* <label>
                     Gender : 
                     <label>Male</label>
-                    <input type="Radio" name="gender" value="Male" onBlur={handleChange} required />
+                    <input type="Radio" name="gender" value="Male"  required />
                     <label>Female</label>
-                    <input type="Radio" name="gender" value="Female" onBlur={handleChange} required/>
+                    <input type="Radio" name="gender" value="Female"  required/>
                 </label>
                 <label>
                     Terms & Condition : 
-                    <input type="checkbox" name="tnc" onBlur={handleChange} required/>
-                </label>
-                <input type="submit" value="Submit"/>
+                    <input type="checkbox" name="tnc"  required/>
+                </label> */} */}
+                {/* <input type="submit" value="Submit"/> */}
             </form>
         </>
     )

@@ -12,7 +12,7 @@ const App = () => {
             <main>
                 <section className="hero">
                     <Recipe />
-                    <Carousel/>
+                    {/* <Carousel/>  */}
                 </section>
             </main>
             <Form/>
