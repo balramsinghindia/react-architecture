@@ -19,6 +19,7 @@ const Form = () => {
      return (
         <>
             <h1>Form</h1>
+            <h3>Prakash Forms</h3>
             <form>
                     <Input 
                     inputType="text" 
