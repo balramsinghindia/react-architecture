@@ -1,8 +1,8 @@
-import Recipe from './Recipe';
-import './../scss/index.scss';
-import Footer from './Footer';
-import Carousel from './Carousel';
-import Form from './Form';
+import Recipe from './containers/Recipe';
+import '../scss/index.scss';
+import Footer from './containers/Footer';
+import Carousel from './containers/Carousel';
+import Form from './molecules/Form';
 
 
 const App = () => {
