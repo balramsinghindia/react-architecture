@@ -28,6 +28,7 @@ const minLength = (value, minLength) => {
 
 export const validateInput = (value, validator) => {
     if(validator && validator.length) {
+       
         for(let i = 0; i < validator.length; i++) {
             const method = eval(validator[i].check[0]);
             const error = method(value, validator[i].check[1]);

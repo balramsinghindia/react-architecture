@@ -2,6 +2,7 @@ import './../../scss/index.scss';
 import {useEffect, useState} from 'react';
 import Input from '../atom/Input';
 import DropDown from '../atom/DropDown';
+import { Checkbox } from '../Checkbox';
 
 
 const Form = () => {
@@ -15,12 +16,24 @@ const Form = () => {
     function handleChange(value){
         console.log("value", value);
     }
+
+    function handleCheckboxChange(value){
+        console.log('value',value)
+    }
+    const style = {
+        background : "azure",
+    }
+    const legendStyle = {
+        fontWeight:700 
+    }
     
      return (
         <>
             <h1>Form</h1>
             <h3>Prakash Forms</h3>
-            <form>
+            <form style={style}>
+                <fieldset>
+                    <legend style={legendStyle}>React atomic form pattern</legend>
                     <Input 
                     inputType="text" 
                     inputName="name" 
@@ -41,7 +54,18 @@ const Form = () => {
                     ]}
                     handleChange={handleChange}
                     />
-
+                    <Checkbox 
+                   
+                    inputName="checkbox"
+                    inputId="checkbox"
+                    validator={[
+                        {
+                            check : ['required'],
+                            message : 'Checkbox is Mandatory'
+                        }
+                    ]}
+                    onChange={handleCheckboxChange}
+                    />
                     {/* <Input 
                     inputType="Email" 
                     inputName="email" 
@@ -82,6 +106,7 @@ const Form = () => {
                     <input type="checkbox" name="tnc"  required/>
                 </label> */} 
                 {/* <input type="submit" value="Submit"/> */}
+                </fieldset>
             </form>
         </>
     )

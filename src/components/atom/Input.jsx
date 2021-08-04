@@ -9,11 +9,12 @@ const Input =  ({label,inputType,inputName,validator, handleChange}) => {
         const validation = validateInput(value, validator);
         setError(validation);        
     }
-
+    const style = {
+        margin : 20
+    }
    
-
     return (
-        <div>
+        <div style={style}>
             <label>{label}</label>
             <input
                 type={inputType}
