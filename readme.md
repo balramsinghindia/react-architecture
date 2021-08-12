@@ -183,3 +183,8 @@ rules: [{
             type: 'asset/resource',
         }]
 ```
+
+
+Redux with functional components:
+https://blog.bitsrc.io/using-react-redux-hooks-97654aff01e4
+
