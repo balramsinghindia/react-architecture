@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export function Footer({copyrightText}){
     return (
@@ -18,3 +19,12 @@ export function Footer({copyrightText}){
     );  
 };
 
+Footer.propTypes = {
+    copyrightText: PropTypes.string
+  };
+
+
+  Footer.defaultProps = {
+    copyrightText: ""
+  };
+  
