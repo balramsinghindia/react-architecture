@@ -1,4 +1,4 @@
-function reducer(state = {vehicle: '', marks:{}}, action){
+function reducer( state = {vehicle: '', marks:{} , newData: ''},  action){
     switch (action.type) {
         case "Car":
         return {
@@ -10,6 +10,10 @@ function reducer(state = {vehicle: '', marks:{}}, action){
             marks: action.data,
           vehicle: "It is a Bike"
         };
+        case "Auto": 
+         return {
+             newData: 'Data changed'
+         };
         default:
           return "No";
       }

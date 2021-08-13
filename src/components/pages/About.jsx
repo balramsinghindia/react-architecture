@@ -28,6 +28,7 @@ export default function About(){
         <>
             <h3>About Page</h3>
             {counter.vehicle}
+            {counter.newData}
 
             <button
                 onClick={() =>
@@ -47,6 +48,15 @@ export default function About(){
                 })
                 }
             >Bike</button>
+
+            <button
+                onClick={() => 
+                 dispatch({
+                    type: "Auto",
+                    newData: "DataChanged"
+                 })
+                }
+            >Update State</button>
             <div className="about">
                 hello i am about
             </div>
