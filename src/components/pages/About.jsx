@@ -27,13 +27,15 @@ export default function About(){
     return (
         <>
             <h3>About Page</h3>
-            {counter.vehicle}
+            <h3>{counter.vehicle}</h3>
+            <h4>{counter.wheels}</h4>
+            {counter.color && <p>It is in {counter.color} color</p>}
 
             <button
                 onClick={() =>
                 dispatch({
                     type: "Car",
-                    data: data
+                    data: data,
                 })
                 }
             >Car</button>
@@ -42,8 +44,7 @@ export default function About(){
                 onClick={() =>
                 dispatch({
                     type: "Bike",
-                    data: data
-
+                    data: data,
                 })
                 }
             >Bike</button>
