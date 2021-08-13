@@ -2,9 +2,14 @@ import { render } from 'react-dom';
 import App from './components/App';
 import CounterContextProvider from './contexts/CounterContexts';
 
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducer1 from "./vehicle.js";
+
+const store = createStore(reducer1);
+
+
 render(
-  <CounterContextProvider>
-    <App />
-  </CounterContextProvider>,
-  document.getElementById('root')
-);
+    <Provider store={store}>
+        <App />
+    </Provider>, document.getElementById("root"));
