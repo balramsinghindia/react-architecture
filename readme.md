@@ -170,3 +170,16 @@ What is JSX?
         <div id="root"></div>
     ```
     
+
+Image Loader Configuration
+/*
+- to show images in React architecture
+*/
+- Added JPEG background image in SCSS
+- webpack.config.js
+```
+rules: [{
+            test: /\.(png|jpe?g|gif|svg)$/i,
+            type: 'asset/resource',
+        }]
+```

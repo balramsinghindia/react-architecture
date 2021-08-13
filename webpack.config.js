@@ -1,7 +1,13 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var path = require('path');
 
 module.exports = {
     mode: "development",
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js',
+        publicPath: '/'
+    },
     module: {
         rules: [
             {
@@ -21,18 +27,20 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                  {
-                    loader: 'file-loader',
-                  },
-                ],
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 55*1024
+                    }
+                }
             }
         ]
     },
     plugins: [new MiniCssExtractPlugin()],
     devServer: {
         contentBase: './dist',
+        historyApiFallback: true,
     },
     devtool: 'source-map',
     resolve: {
