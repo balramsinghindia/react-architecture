@@ -1,6 +1,5 @@
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'; 
 import { useCallback } from 'react';
-import Recipe from './Recipe';
 import { Footer } from './Footer';
 import './../scss/index.scss';
 import { Counter } from './Counter';
@@ -12,8 +11,15 @@ import Header from './Header';
 import NotFound from './pages/NotFound';
 import Post from './pages/Post';
 import Carousel from './pages/Carousel';
+import Form from './molecules/Form';
+
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { Reducer } from './redux/Reducer';
 
 const App = () => {    
+
+    const store = createStore(Reducer);
     return (
         <BrowserRouter>
             <CounterContextProvider>
@@ -36,6 +42,9 @@ const App = () => {
                     
                     <Route path='/post/:id' component={Post} />
                     <Route path='/carousel' component={Carousel} />
+                    <Provider store={store}>
+                    <Route path='/form' component={Form}/>
+                    </Provider>
                     <Route component={NotFound} />
                 </Switch> 
                 

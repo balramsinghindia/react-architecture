@@ -4,8 +4,15 @@ import Input from '../atom/Input';
 import DropDown from '../atom/DropDown';
 import { Checkbox } from '../Checkbox';
 
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const Form = () => {
+
+    const formState = useSelector((state) => state);
+
+    const dispatch = useDispatch();
+
     var cities = ['Indore','Bhopal','Jaipur','Lucknow','Ahemdabad','Pune','Mumbai','Washington','LA','San Francisco','Columbus'];
     var States = ['Uttar Pradesh','Madhaya Pradesh','Maharashtra','Gujarat','Rajasthan','Washington DC','Ohio','California'];
     var Countries = ['India','USA'];
@@ -26,12 +33,19 @@ const Form = () => {
     const legendStyle = {
         fontWeight:700 
     }
+    // sending back to redux store
+    function InputOnChange(event){
+        console.log(event.target.value);
+       return dispatch( { type: 'initialState', data: event.target.value});
+    }
+
+   
     
      return (
         <>
             <h1>Form</h1>
             <h3>Prakash Forms</h3>
-            <form style={style}>
+            <form style={style} >
                 <fieldset>
                     <legend style={legendStyle}>React atomic form pattern</legend>
                     <Input 
@@ -52,10 +66,10 @@ const Form = () => {
                             message: "Name should be less than 20 characters"
                         }
                     ]}
+                    inputOnChange={InputOnChange}
                     handleChange={handleChange}
                     />
                     <Checkbox 
-                   
                     inputName="checkbox"
                     inputId="checkbox"
                     validator={[
@@ -105,7 +119,7 @@ const Form = () => {
                     Terms & Condition : 
                     <input type="checkbox" name="tnc"  required/>
                 </label> */} 
-                {/* <input type="submit" value="Submit"/> */}
+              
                 </fieldset>
             </form>
         </>

@@ -2,7 +2,13 @@ import './../../scss/index.scss';
 import {useEffect, useState} from 'react';
 import { validateInput } from '../utilities/Validator';
 
-const Input =  ({label,inputType,inputName,validator, handleChange}) => {
+import { useSelector } from 'react-redux';
+
+const Input =  ({label,inputType,inputName,validator, handleChange,inputOnChange}) => {
+    const inputState = useSelector((state) => state);
+    console.log(inputState); // redux state information
+
+
     const [error , setError] = useState('');
     function handleInputChange(e) {
         const { value } = e.target;
@@ -19,6 +25,8 @@ const Input =  ({label,inputType,inputName,validator, handleChange}) => {
             <input
                 type={inputType}
                 name={inputName}
+                value={inputState.value}
+                onChange={inputOnChange}
                 onBlur={handleInputChange}
             />
             <div className="error">
