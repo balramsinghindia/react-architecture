@@ -183,3 +183,7 @@ rules: [{
             type: 'asset/resource',
         }]
 ```
+
+
+Combine reducers:
+https://redux.js.org/api/combinereducers

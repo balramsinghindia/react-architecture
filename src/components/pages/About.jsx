@@ -21,13 +21,14 @@ export default function About(){
 
 
     useEffect(()=> {
+        console.log(counter)
         window.scroll(0, 0);
     }, []);
     
     return (
         <>
             <h3>About Page</h3>
-            {counter.vehicle}
+            {counter.reducer.vehicle}
 
             <button
                 onClick={() =>
@@ -41,12 +42,13 @@ export default function About(){
             <button
                 onClick={() =>
                 dispatch({
-                    type: "Bike",
+                    type: "ADD_TODO",
                     data: data
-
                 })
                 }
             >Bike</button>
+
+            {counter.todos.todo}
             <div className="about">
                 hello i am about
             </div>

@@ -3,9 +3,9 @@ import App from './components/App';
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import reducer1 from "./vehicle.js";
+import reducer from "./reducers/index";
 
-const store = createStore(reducer1);
+const store = createStore(reducer);
 
 
 render(
